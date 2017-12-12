@@ -15,7 +15,7 @@ class ProjectCell: UITableViewCell {
     @IBOutlet weak var projectImage: UIImageView!
     
     func configure(project: Project, rowNumber:Int) {
-        title.text = project.title
+        title.text = project.title + " (" + String(project.id) + ")"
         if let image = imageCache[project.id] {
             print("Loading image from cache for \(project.id)")
             projectImage.image = image

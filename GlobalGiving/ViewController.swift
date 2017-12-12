@@ -12,13 +12,19 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var projectTableView: UITableView!
     
+    @IBAction func reloadButton(_ sender: Any) {
+        loadFeaturedProjects()
+    }
     var projects:[Project] = []
     var api = GlobalGivingApi()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        loadFeaturedProjects()
+    }
+
+    func loadFeaturedProjects() {
         print("Starting")
         let projects = api.getFeaturedProjects() { projects, errorMessage in
             if let projects = projects {
@@ -30,7 +36,7 @@ class ViewController: UIViewController {
         print("projects=\(self.projects.count)")
         print("done")
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

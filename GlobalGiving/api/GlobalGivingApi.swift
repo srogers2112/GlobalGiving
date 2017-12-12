@@ -45,15 +45,15 @@ internal class GlobalGivingApi {
         let url = FEATURED_PROJECTS + apiKey
 //        let url = ALL_PROJECTS + apiKey
         Alamofire.request(url).responseString { response in
-                print("Response String: \(response.result.value)\n\n\n\n")
+//                print("Response String: \(response.result.value)\n\n\n\n")
             }.responseData { response in
                 switch response.result {
                 case .success:
                     do {
                         let decoder = JSONDecoder()
                         let decodedProjects = try decoder.decode(projectReq.self, from: response.data!)
-                        let encoder = JSONEncoder()
-                        encoder.outputFormatting = JSONEncoder.OutputFormatting([JSONEncoder.OutputFormatting.prettyPrinted, JSONEncoder.OutputFormatting.sortedKeys])
+//                        let encoder = JSONEncoder()
+//                        encoder.outputFormatting = JSONEncoder.OutputFormatting([JSONEncoder.OutputFormatting.prettyPrinted, JSONEncoder.OutputFormatting.sortedKeys])
 //                        try print("Using Decoder===>\(String(data: (encoder.encode(decodedProjects)), encoding: .utf8)! )\n\n\n\n")
                         self.projects.removeAll()
                         self.projects = decodedProjects.projects!.project

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,18 +16,29 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GlobalGiving" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bep-Yu-JWt">
+                                <rect key="frame" x="0.0" y="95" width="375" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.25057109259999999" blue="0.033227974370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                <state key="normal" title="RELOAD">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="reloadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dze-iV-2sm"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GH8-3o-O6j">
-                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="125" width="375" height="542"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProjectCell" rowHeight="75" id="RBm-Sb-rdy" customClass="ProjectCell" customModule="GlobalGiving" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="75"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RBm-Sb-rdy" id="13b-zh-lHG">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="74.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nD9-Kp-ngf">
@@ -63,13 +74,23 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="hrI-ax-h4e"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GG_Logo_horizontal@x1" translatesAutoresizingMaskIntoConstraints="NO" id="uPs-l9-Eqh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="75"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="GH8-3o-O6j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7nt-Wt-Gnd"/>
+                            <constraint firstItem="uPs-l9-Eqh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2b7-gq-qDQ"/>
+                            <constraint firstItem="uPs-l9-Eqh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AFI-c7-N4f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bep-Yu-JWt" secondAttribute="trailing" id="D6e-kL-xgO"/>
+                            <constraint firstItem="Bep-Yu-JWt" firstAttribute="top" secondItem="uPs-l9-Eqh" secondAttribute="bottom" id="FB1-si-CMJ"/>
+                            <constraint firstItem="Bep-Yu-JWt" firstAttribute="top" secondItem="uPs-l9-Eqh" secondAttribute="bottom" id="NPT-GL-arm"/>
+                            <constraint firstItem="Bep-Yu-JWt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UWn-Aa-WWq"/>
+                            <constraint firstItem="uPs-l9-Eqh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="V6w-0H-YR4"/>
+                            <constraint firstItem="GH8-3o-O6j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XNQ-up-8IW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GH8-3o-O6j" secondAttribute="trailing" id="fgt-cg-Xcx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GH8-3o-O6j" secondAttribute="bottom" id="sOO-QU-cIa"/>
-                            <constraint firstItem="GH8-3o-O6j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="saJ-VD-NH7"/>
+                            <constraint firstItem="GH8-3o-O6j" firstAttribute="top" secondItem="Bep-Yu-JWt" secondAttribute="bottom" id="uCR-63-vkw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -82,4 +103,7 @@
             <point key="canvasLocation" x="135" y="125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="GG_Logo_horizontal@x1" width="375" height="75"/>
+    </resources>
 </document>
