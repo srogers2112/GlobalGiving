@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 
     func loadFeaturedProjects() {
         print("Starting")
-        let projects = api.getFeaturedProjects() { projects, errorMessage in
+        _ = api.getFeaturedProjects() { projects, errorMessage in
             if let projects = projects {
                 self.projects = projects
                 self.projectTableView.reloadData()

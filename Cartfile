@@ -1,2 +1,2 @@
-github "Alamofire/Alamofire" ~> 4.5
+github "Alamofire/Alamofire" ~> 4.7
 github "Alamofire/AlamofireImage" ~> 3.3

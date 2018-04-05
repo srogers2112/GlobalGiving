@@ -15,7 +15,7 @@
 		ED663FB91FCF55FF00ABE1BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED663FB71FCF55FF00ABE1BD /* LaunchScreen.storyboard */; };
 		ED663FC41FCF55FF00ABE1BD /* GlobalGivingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED663FC31FCF55FF00ABE1BD /* GlobalGivingTests.swift */; };
 		EDD9735A1FD8953E00B778B8 /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD973591FD8953E00B778B8 /* ProjectCell.swift */; };
-		EDD9735E1FDB0B0300B778B8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD9735D1FDB0B0300B778B8 /* Extensions.swift */; };
+		EDD9735E1FDB0B0300B778B8 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD9735D1FDB0B0300B778B8 /* UIImageViewExtensions.swift */; };
 		EDFE63491FD087BA00A4BE23 /* GlobalGivingApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFE63481FD087BA00A4BE23 /* GlobalGivingApi.swift */; };
 		EDFE634C1FD08EF600A4BE23 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFE634A1FD08EF600A4BE23 /* AlamofireImage.framework */; };
 		EDFE634D1FD08EF600A4BE23 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDFE634A1FD08EF600A4BE23 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -61,7 +61,7 @@
 		ED663FC31FCF55FF00ABE1BD /* GlobalGivingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalGivingTests.swift; sourceTree = "<group>"; };
 		ED663FC51FCF55FF00ABE1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDD973591FD8953E00B778B8 /* ProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
-		EDD9735D1FDB0B0300B778B8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EDD9735D1FDB0B0300B778B8 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		EDFE63481FD087BA00A4BE23 /* GlobalGivingApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalGivingApi.swift; sourceTree = "<group>"; };
 		EDFE634A1FD08EF600A4BE23 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		EDFE634B1FD08EF600A4BE23 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 				ED663FB71FCF55FF00ABE1BD /* LaunchScreen.storyboard */,
 				ED663FBA1FCF55FF00ABE1BD /* Info.plist */,
 				EDD973591FD8953E00B778B8 /* ProjectCell.swift */,
-				EDD9735D1FDB0B0300B778B8 /* Extensions.swift */,
+				EDD9735D1FDB0B0300B778B8 /* UIImageViewExtensions.swift */,
 			);
 			path = GlobalGiving;
 			sourceTree = "<group>";
@@ -195,7 +195,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Envieta;
 				TargetAttributes = {
 					ED663FAA1FCF55FF00ABE1BD = {
@@ -254,7 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED663FB11FCF55FF00ABE1BD /* ViewController.swift in Sources */,
-				EDD9735E1FDB0B0300B778B8 /* Extensions.swift in Sources */,
+				EDD9735E1FDB0B0300B778B8 /* UIImageViewExtensions.swift in Sources */,
 				ED663FAF1FCF55FF00ABE1BD /* AppDelegate.swift in Sources */,
 				EDFE63491FD087BA00A4BE23 /* GlobalGivingApi.swift in Sources */,
 				EDD9735A1FD8953E00B778B8 /* ProjectCell.swift in Sources */,
@@ -314,6 +314,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -321,6 +322,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -371,6 +373,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -378,6 +381,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

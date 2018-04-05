@@ -41,12 +41,14 @@ internal class GlobalGivingApi {
     var errorMessage = ""
     
     func getFeaturedProjects(completion: @escaping ProjectResult) {
+        getProjects(FEATURED_PROJECTS + apiKey, completion)
+    }
+    
+    internal func getProjects(_ url: String, _ completion: @escaping ProjectResult) {
 //        var result = Array<Project>()
         let url = FEATURED_PROJECTS + apiKey
 //        let url = ALL_PROJECTS + apiKey
-        Alamofire.request(url).responseString { response in
-//                print("Response String: \(response.result.value)\n\n\n\n")
-            }.responseData { response in
+        Alamofire.request(url).responseData { response in
                 switch response.result {
                 case .success:
                     do {
