@@ -14,5 +14,5 @@
 - Clone/Fork this [repo](https://github.com/srogers2112/GlobalGiving)
 - Install Carthage using `brew install carthage` (requires [HomeBrew](http://brew.sh/))
 - In a terminal Shell, navigate to the project root folder
-  where the Cartfile is located and run `carthage update`
+  where the Cartfile is located and run `carthage update`.
   
