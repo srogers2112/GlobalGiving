@@ -3,7 +3,7 @@
 //  GlobalGivingTests
 //
 //  Created by Steven Rogers on 11/29/17.
-//  Copyright © 2017 Envieta. All rights reserved.
+//  
 //
 
 import XCTest

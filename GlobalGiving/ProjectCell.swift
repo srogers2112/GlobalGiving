@@ -16,12 +16,13 @@ class ProjectCell: UITableViewCell {
     
     func configure(project: Project, rowNumber:Int) {
         title.text = project.title + " (" + String(project.id) + ")"
+        print("Displaying \(project.id) with summary: \(project.summary)")
         if let image = imageCache[project.id] {
             print("Loading image from cache for \(project.id)")
             projectImage.image = image
         } else {
             print("Downloading image for \(project.id)")
-            projectImage.downloadImageFrom(url: project.image!.getImageUrl(size: imageSize.small)!, projectId: project.id, contentMode: UIViewContentMode.scaleAspectFit)
+            projectImage.downloadImageFrom(url: project.image!.getImageUrl(size: imageSize.small)!, projectId: project.id, contentMode: UIView.ContentMode.scaleAspectFit)
         }
     }
 }

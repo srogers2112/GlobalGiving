@@ -17,7 +17,7 @@ extension UIImageView {
     /**
      Extension of UIImageView to enable the UIImageView component to load itself from a URL
     */
-    func downloadImageFrom(url: String, projectId: Int, contentMode: UIViewContentMode) {
+    func downloadImageFrom(url: String, projectId: Int, contentMode: UIView.ContentMode) {
         Alamofire.request(url).responseImage { response in
             //callback/completion handler to handle response asynchronously
             switch response.result {

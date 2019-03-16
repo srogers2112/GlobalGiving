@@ -66,6 +66,7 @@ internal class GlobalGivingApi {
                         print("Downloaded project set:\n\(ids)")
 //                        let url = self.projects[0].image?.getImageUrl(size: .large)
 //                        print(url)
+                        // Set 
                         DispatchQueue.main.async {
                             completion(self.projects, self.errorMessage)
                         }

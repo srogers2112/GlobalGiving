@@ -48,5 +48,5 @@ class Project: Codable {
     var funding:Double = 0
     var imageGallerySize:Int = 0
     var image:image?
-    
+    var summary:String = ""
 }
