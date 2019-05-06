@@ -2,8 +2,8 @@
 
 ## Requirements
 
-- XCode 9.x
-- Swift 4.x
+- XCode 10.2.x
+- Swift 5.x
 - [HomeBrew](http://brew.sh/)
 - [Carthage](https://github.com/Carthage/Carthage) Installed via HomeBrew
 - [AlamoFire](https://github.com/Alamofire/Alamofire) Installed via Carthage in Xcode Project
