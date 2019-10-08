@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- XCode 10.2.x
+- XCode 11.1.x
 - Swift 5.x
 - [HomeBrew](http://brew.sh/)
 - [Carthage](https://github.com/Carthage/Carthage) Installed via HomeBrew

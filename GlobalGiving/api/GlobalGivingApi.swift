@@ -45,10 +45,8 @@ internal class GlobalGivingApi {
     }
     
     internal func getProjects(_ url: String, _ completion: @escaping ProjectResult) {
-//        var result = Array<Project>()
         let url = FEATURED_PROJECTS + apiKey
-//        let url = ALL_PROJECTS + apiKey
-        Alamofire.request(url).responseData { response in
+        request(url).responseData { response in
                 switch response.result {
                 case .success:
                     do {
